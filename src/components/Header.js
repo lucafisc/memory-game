@@ -4,7 +4,7 @@ export function Header() {
   return (
     <header className="header">
       <h1>memory game</h1>
-      <Score />
+      <Score score={0} />
     </header>
   );
 }

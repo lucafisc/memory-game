@@ -1,3 +1,4 @@
 export default function Score(props) {
-  return <h1>score: </h1>;
+  const { score } = props;
+  return <h1>score: {score}</h1>;
 }
