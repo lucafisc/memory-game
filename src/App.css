@@ -1,21 +1,30 @@
-@font-face {
-  font-family: 'Terminal Grotesque';
-  src: url("./fonts/terminal-grotesque.ttf");
-  font-style: normal;
+.App {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-@font-face {
-  font-family: 'Terminal Grotesque Open';
-  src: url("./fonts/terminal-grotesque_open.otf");
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Noto Emoji';
-  src: url("./fonts/NotoEmoji-VariableFont_wght.ttf");
-  font-style: normal;
+.header,
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  width: 100vw;
+  background-color: var(--background);
 }
 
 .header {
-  font-family: "Noto Emoji";
+  border-bottom: 10px solid var(--off-black);
+}
+
+.footer {
+  border-top: 10px solid var(--off-black);
+}
+
+.header,
+.footer {
+  font-family: 'Terminal Grotesque';
+  font-size: 1rem;
 }
