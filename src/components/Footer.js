@@ -1,6 +1,6 @@
 import Marquee from "./Marquee";
 
-export function Footer(props) {
+export default function Footer(props) {
   const { level } = props;
   return (
     <footer className="footer">
