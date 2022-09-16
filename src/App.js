@@ -16,6 +16,7 @@ function App() {
 
   function addPoint() {
     setScore((prevScore) => prevScore + 1);
+    setLevel((prevLevel) => prevLevel + 1);
   }
 
   function levelUp() {
@@ -25,8 +26,6 @@ function App() {
   return (
     <>
       <div className="App">
-        <button onClick={addPoint}>+</button>
-
         <Header score={score} />
         <Gameboard icons={icons} />
         <Footer level={level + 1} />

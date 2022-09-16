@@ -31,6 +31,19 @@
   height: 70px;
 }
 
+.points-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-right: 90px;
+}
+
+.points {
+  position: absolute;
+  right: -70px;
+}
+
 .gameboard {
   display: grid;
   grid-gap: 10px;

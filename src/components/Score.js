@@ -4,10 +4,9 @@ export default function Score(props) {
   const { score } = props;
   useEffect(() => {
     animateScore();
-    console.log("schore");
   }, [score]);
   return (
-    <h1>
+    <h1 className="points-container">
       score:{" "}
       <span id="score" className="points">
         {score}
@@ -21,5 +20,5 @@ function animateScore() {
   score.classList.add("new-point");
   setTimeout(() => {
     score.classList.remove("new-point");
-  }, 2000);
+  }, 300);
 }

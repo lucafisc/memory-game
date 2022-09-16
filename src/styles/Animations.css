@@ -40,3 +40,42 @@
         transform: translate(100%, 0);
     }
 }
+
+.points {
+    transition: all 0.1s ease-out;
+}
+
+.new-point {
+    color: var(--hover);
+    font-size: 3.6rem;
+    animation: pulsate 1.5s ease-in-out infinite both;
+
+}
+
+@keyframes pulsate {
+    from {
+        transform: scale(1);
+        transform-origin: center center;
+        animation-timing-function: ease-out;
+    }
+
+    10% {
+        transform: scale(1.1);
+        animation-timing-function: ease-in;
+    }
+
+    17% {
+        transform: scale(1.8);
+        animation-timing-function: ease-out;
+    }
+
+    33% {
+        transform: scale(0.87);
+        animation-timing-function: ease-in;
+    }
+
+    45% {
+        transform: scale(1);
+        animation-timing-function: ease-out;
+    }
+}
