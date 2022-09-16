@@ -10,22 +10,23 @@
   --off-black: #111314;
   --background: #f98419;
   --hover: #1c36f7;
+  --speed: 5s;
 }
 
 @font-face {
   font-family: 'Terminal Grotesque';
-  src: url("./fonts/terminal-grotesque.ttf");
+  src: url("../fonts/terminal-grotesque.ttf");
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Terminal Grotesque Open';
-  src: url("./fonts/terminal-grotesque_open.otf");
+  src: url("../fonts/terminal-grotesque_open.otf");
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Noto Emoji';
-  src: url("./fonts/NotoEmoji-VariableFont_wght.ttf");
+  src: url("../fonts/NotoEmoji-VariableFont_wght.ttf");
   font-style: normal;
 }

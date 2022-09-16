@@ -1,10 +1,14 @@
+import Marquee from "./Marquee";
+
 export function Footer(props) {
   const { level } = props;
   return (
     <footer className="footer">
-      <h1>
-        level <span>{level}</span>
-      </h1>
+      <Marquee level={level} number={"0"} />
+      <Marquee level={level} number={"1"} />
+      <Marquee level={level} number={"2"} />
+      <Marquee level={level} number={"3"} />
+      <Marquee level={level} number={"4"} />
     </footer>
   );
 }

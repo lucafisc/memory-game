@@ -1,0 +1,42 @@
+.marquee {
+    margin: 0 auto;
+    white-space: nowrap;
+    overflow: hidden;
+    position: absolute;
+    animation: marquee var(--speed) linear infinite;
+    display: inline-block;
+    width: 25vw;
+}
+
+.marquee0 {
+    left: -25%;
+}
+
+.marquee1 {
+    left: 0;
+}
+
+.marquee2 {
+    left: 25%;
+}
+
+.marquee3 {
+    left: 50%;
+}
+
+.marquee4 {
+    left: 75%;
+}
+
+
+
+
+@keyframes marquee {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(100%, 0);
+    }
+}

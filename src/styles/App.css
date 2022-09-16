@@ -21,10 +21,12 @@
 
 .footer {
   border-top: 10px solid var(--off-black);
+  max-width: 100%;
 }
 
 .header,
 .footer {
   font-family: 'Terminal Grotesque';
-  font-size: 1rem;
+  font-size: 1.2rem;
+  height: 70px;
 }
