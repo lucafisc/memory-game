@@ -1,8 +1,8 @@
 export default function Card(props) {
-  const { icon } = props;
+  const { icon, checkMove } = props;
 
   return (
-    <div className="card">
+    <div onClick={() => checkMove(icon)} className="card">
       <p>{icon}</p>
     </div>
   );

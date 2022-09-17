@@ -8,6 +8,7 @@ import "./styles/Animations.css";
 function App() {
   const [level, setLevel] = useState(0);
   const [score, setScore] = useState(0);
+  const [selected, setSelected] = useState([]);
   const { backgroundColor, hoverColor, speed, icons } = levelData[level];
 
   useEffect(() => {
@@ -16,20 +17,37 @@ function App() {
 
   function addPoint() {
     setScore((prevScore) => prevScore + 1);
-    setLevel((prevLevel) => (prevLevel === 8 ? 0 : prevLevel + 1));
   }
 
   function levelUp() {
     setLevel((prevLevel) => (prevLevel === 8 ? 0 : prevLevel + 1));
   }
 
+  function checkMove(selection) {
+    const wasAlreadyClicked = selected.some((icon) => icon === selection);
+    if (wasAlreadyClicked) {
+      console.log("game-over");
+    } else {
+      addPoint();
+      setSelected((prevArray) => [...prevArray, selection]);
+    }
+  }
+
+  useEffect(() => {
+    const levelLength = icons.length;
+    const currentLength = selected.length;
+    if (levelLength === currentLength) {
+      levelUp();
+      setSelected([]);
+    }
+  }, [selected]);
+
   return (
     <>
       <div className="App">
         <Header score={score} />
-        <Gameboard icons={icons} />
+        <Gameboard icons={icons} checkMove={checkMove} />
         <Footer level={level + 1} />
-        <button onClick={addPoint}>+</button>
       </div>
     </>
   );
