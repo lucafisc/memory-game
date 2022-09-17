@@ -79,3 +79,22 @@
         animation-timing-function: ease-out;
     }
 }
+
+.game-over>h1 {
+    animation: gameover 1.5s ease-in-out infinite both;
+}
+
+@keyframes gameover {
+    0% {
+        color: var(--off-black);
+    }
+
+    50% {
+        transform: scale(1.05);
+        color: var(--hover);
+    }
+
+    100% {
+        color: var(--off-black);
+    }
+}

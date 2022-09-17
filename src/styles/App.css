@@ -13,7 +13,7 @@
   padding: 10px;
   width: 100vw;
   background-color: var(--background);
-  transition: background-color 2s ease-in-out;
+  transition: background-color 1s ease-out;
 }
 
 .header {
@@ -30,6 +30,10 @@
   font-family: 'Terminal Grotesque';
   font-size: 1.2rem;
   height: 70px;
+}
+
+.game-over-msg {
+  font-family: 'Noto Emoji';
 }
 
 .points-container {
@@ -76,5 +80,38 @@
 }
 
 .card:active {
+  transform: scale(0.95);
+}
+
+.game-over {
+  font-family: 'Terminal Grotesque';
+  font-size: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.game-over>h1 {
+  margin-bottom: 20px;
+}
+
+.game-over>button {
+  margin-top: 20px;
+  font-family: 'Terminal Grotesque';
+  font-size: 1.2rem;
+  cursor: pointer;
+  background-color: var(--background);
+  outline: none;
+  border: 5px solid var(--off-black);
+  padding: 10px;
+  transition: transform 0.2s ease-out;
+}
+
+.game-over>button:hover {
+  background-color: var(--hover);
+}
+
+.game-over>button:active {
   transform: scale(0.95);
 }

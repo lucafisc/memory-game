@@ -4,12 +4,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  cursor: default;
 }
 
 :root {
   --off-black: #111314;
-  --background: #f98419;
+  --background: white;
   --hover: #1c36f7;
   --speed: 5s;
 }
