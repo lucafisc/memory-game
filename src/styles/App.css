@@ -32,9 +32,7 @@
   height: 70px;
 }
 
-.game-over-msg {
-  font-family: 'Noto Emoji';
-}
+
 
 .points-container {
   display: flex;
@@ -83,6 +81,7 @@
   transform: scale(0.95);
 }
 
+.new-game,
 .game-over {
   font-family: 'Terminal Grotesque';
   font-size: 1.2rem;
@@ -92,10 +91,12 @@
   align-items: center;
 }
 
+.new-game>h1,
 .game-over>h1 {
   margin-bottom: 20px;
 }
 
+.new-game>button,
 .game-over>button {
   margin-top: 20px;
   font-family: 'Terminal Grotesque';
@@ -108,10 +109,17 @@
   transition: transform 0.2s ease-out;
 }
 
+.new-game>button:hover,
 .game-over>button:hover {
   background-color: var(--hover);
 }
 
+.new-game>button:active,
 .game-over>button:active {
   transform: scale(0.95);
+}
+
+.footer-msg {
+  font-family: 'Noto Emoji';
+  padding-left: 25%;
 }

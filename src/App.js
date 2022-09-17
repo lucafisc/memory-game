@@ -15,12 +15,12 @@ function App() {
   const [lastScore, setLastScore] = useState(0);
   const [selected, setSelected] = useState([]);
   const [gameOver, setGameOver] = useState(false);
-
+  const [newRound, setNewRound] = useState(true);
   const { backgroundColor, hoverColor, speed, icons } = levelData[level];
 
   useEffect(() => {
-    changeStyles(backgroundColor, hoverColor, speed);
-  }, [level]);
+    changeStyles(backgroundColor, hoverColor, speed, newRound);
+  }, [level, newRound]);
 
   function addPoint() {
     setScore((prevScore) => prevScore + 1);
@@ -51,8 +51,13 @@ function App() {
 
   function newGame() {
     setGameOver(false);
+    setNewRound(true);
     setLevel(0);
     setSelected([]);
+  }
+
+  function startGame() {
+    setNewRound(false);
   }
 
   useEffect(() => {
@@ -72,7 +77,14 @@ function App() {
     <>
       <div className="App">
         <Header score={score} />
-        {!gameOver && <Gameboard icons={icons} checkMove={checkMove} />}
+        {!gameOver && (
+          <Gameboard
+            icons={icons}
+            checkMove={checkMove}
+            newRound={newRound}
+            startGame={startGame}
+          />
+        )}
         {gameOver && (
           <GameOver
             lastScore={lastScore}
@@ -80,16 +92,22 @@ function App() {
             newGame={newGame}
           />
         )}
-        <Footer level={level + 1} gameOver={gameOver} />
+        <Footer level={level + 1} gameOver={gameOver} newRound={newRound} />
       </div>
     </>
   );
 }
 
-function changeStyles(background, hover, speed) {
-  document.documentElement.style.setProperty("--background", background);
-  document.documentElement.style.setProperty("--hover", hover);
-  document.documentElement.style.setProperty("--speed", speed);
+function changeStyles(background, hover, speed, newGame) {
+  if (newGame) {
+    document.documentElement.style.setProperty("--background", "white");
+    document.documentElement.style.setProperty("--hover", "blue");
+    document.documentElement.style.setProperty("--speed", "0s");
+  } else {
+    document.documentElement.style.setProperty("--background", background);
+    document.documentElement.style.setProperty("--hover", hover);
+    document.documentElement.style.setProperty("--speed", speed);
+  }
 }
 
 export default App;
