@@ -70,6 +70,17 @@ function App() {
   }, [selected]);
 
   useEffect(() => {
+    if (newRound) {
+      document.title = "memory game";
+    } else if (gameOver) {
+      document.title = "game over";
+    } else {
+      const lvl = level + 1;
+      document.title = "level " + lvl;
+    }
+  }, [level, newRound, gameOver]);
+
+  useEffect(() => {
     localStorage.setItem("high-score", JSON.stringify(highScore));
   }, [highScore]);
 
