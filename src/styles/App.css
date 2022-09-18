@@ -147,7 +147,10 @@
     margin-right: 50px;
   }
 
-  .marquee {}
+  .card:hover {
+    color: inherit;
+    transform: scale(1);
+  }
 
   .points {
     right: -40px
