@@ -139,6 +139,19 @@
     font-size: 0.8rem;
   }
 
+  .header {
+    border-bottom: 7px solid var(--off-black);
+  }
+
+  .footer {
+    border-top: 7px solid var(--off-black);
+  }
+
+  .header,
+  .footer {
+    min-height: 70px;
+  }
+
   .gameboard {
     overflow-x: hidden;
   }
@@ -148,6 +161,7 @@
     margin-right: 50px;
   }
 
+  .button:hover,
   .card:hover {
     color: inherit;
     transform: scale(1);

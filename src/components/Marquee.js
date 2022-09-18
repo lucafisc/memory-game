@@ -3,7 +3,7 @@ export default function Marquee(props) {
   const classes = "marquee " + "marquee" + number;
   let text;
   if (newRound) {
-    text = <h1 className="footer-msg">👋</h1>;
+    text = <h1 className="footer-msg">🧠</h1>;
   } else if (gameOver) {
     text = <h1 className="footer-msg">😵‍💫</h1>;
   } else {
