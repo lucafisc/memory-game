@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/memory-game/static/css/main.347283ac.css",
-    "main.js": "/memory-game/static/js/main.1496dc4e.js",
+    "main.css": "/memory-game/static/css/main.5204caec.css",
+    "main.js": "/memory-game/static/js/main.cd32b2d0.js",
     "static/media/NotoEmoji-VariableFont_wght.ttf": "/memory-game/static/media/NotoEmoji-VariableFont_wght.0065ce9f4db9c1e5b7f1.ttf",
     "static/media/terminal-grotesque_open.otf": "/memory-game/static/media/terminal-grotesque_open.48d739d099307982b926.otf",
     "static/media/terminal-grotesque.ttf": "/memory-game/static/media/terminal-grotesque.6a1b7290048681921b2c.ttf",
     "index.html": "/memory-game/index.html",
-    "main.347283ac.css.map": "/memory-game/static/css/main.347283ac.css.map",
-    "main.1496dc4e.js.map": "/memory-game/static/js/main.1496dc4e.js.map"
+    "main.5204caec.css.map": "/memory-game/static/css/main.5204caec.css.map",
+    "main.cd32b2d0.js.map": "/memory-game/static/js/main.cd32b2d0.js.map"
   },
   "entrypoints": [
-    "static/css/main.347283ac.css",
-    "static/js/main.1496dc4e.js"
+    "static/css/main.5204caec.css",
+    "static/js/main.cd32b2d0.js"
   ]
 }
