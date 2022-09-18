@@ -4,6 +4,8 @@ import Gameboard from "./components/Gameboard";
 import Footer from "./components/Footer";
 import GameOver from "./components/GameOver";
 import { levelData } from "./components/levelData";
+import Div100vh from "react-div-100vh";
+
 import "./styles/App.css";
 import "./styles/Animations.css";
 function App() {
@@ -93,7 +95,7 @@ function App() {
   });
 
   return (
-    <>
+    <Div100vh>
       <div className="App">
         <Header score={score} />
         {!gameOver && (
@@ -113,7 +115,7 @@ function App() {
         )}
         <Footer level={level + 1} gameOver={gameOver} newRound={newRound} />
       </div>
-    </>
+    </Div100vh>
   );
 }
 
