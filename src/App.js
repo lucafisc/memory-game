@@ -84,6 +84,14 @@ function App() {
     localStorage.setItem("high-score", JSON.stringify(highScore));
   }, [highScore]);
 
+  window.onresize = function () {
+    document.body.height = window.innerHeight;
+  };
+
+  useEffect(() => {
+    window.onresize();
+  });
+
   return (
     <>
       <div className="App">
