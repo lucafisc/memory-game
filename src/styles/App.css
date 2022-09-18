@@ -24,6 +24,8 @@
 .footer {
   border-top: 10px solid var(--off-black);
   max-width: 100%;
+  position: relative;
+  overflow: hidden;
 }
 
 .header,
@@ -123,4 +125,31 @@
 .footer-msg {
   font-family: 'Noto Emoji';
   padding-left: 25%;
+}
+
+@media only screen and (max-width: 600px) {
+
+  body {
+    overflow: hidden;
+  }
+
+  .header,
+  .footer {
+    font-size: 0.8rem;
+  }
+
+  .gameboard {
+    overflow-x: hidden;
+  }
+
+  .points-container {
+    margin-left: auto;
+    margin-right: 50px;
+  }
+
+  .marquee {}
+
+  .points {
+    right: -40px
+  }
 }
