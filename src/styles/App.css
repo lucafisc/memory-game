@@ -163,10 +163,11 @@
   }
 
   .button:hover,
-  .card:hover {
+  .card:hover p {
     color: inherit;
     transform: scale(1);
   }
+
 
   .points {
     right: -40px
